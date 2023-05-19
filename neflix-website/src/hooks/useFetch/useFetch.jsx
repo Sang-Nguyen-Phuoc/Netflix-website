@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 const useFetch = (url, initialValues = []) => {
-    const [data, setData] = useState(initialValues)
-    const [isLoading, setIsLoading] = useState(false); 
-    const [error, setError] = useState(null); 
+    const [data, setData] = useState(initialValues);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetchData(); 
-    }, []); 
+        fetchData();
+    }, [url]);
     const fetchData = async () => {
         try {
             setIsLoading(true)
@@ -21,7 +21,7 @@ const useFetch = (url, initialValues = []) => {
             setError(error);
         }
     };
-    return { data, isLoading, error }; 
+    return { data, isLoading, error };
 }
 
 export default useFetch;

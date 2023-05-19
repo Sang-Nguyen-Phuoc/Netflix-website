@@ -1,0 +1,21 @@
+.movie-item img {
+  width: auto;
+  object-fit: contain;
+  height: 150px;
+  transition: transform 450ms;
+}
+
+.movie-item img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.movie-item-poster img {
+  height: 250px;
+  width: auto;
+}
+
+.movie-item-poster img:hover {
+  transform: scale(1.09);
+  opacity: 1;
+}

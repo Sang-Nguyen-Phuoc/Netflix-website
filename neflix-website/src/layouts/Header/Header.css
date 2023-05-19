@@ -1,0 +1,18 @@
+
+.navbar {
+    background-color: #0b0b0b;
+    color: #fff;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin: 0;  
+}
+.navbar .container .left img {
+    height: 25px;
+    
+}

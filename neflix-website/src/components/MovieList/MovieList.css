@@ -1,0 +1,15 @@
+.movie-list {
+  display: flex;
+  gap: 10px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.movie-list::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-list-container {
+  margin-left: 20px;
+}
