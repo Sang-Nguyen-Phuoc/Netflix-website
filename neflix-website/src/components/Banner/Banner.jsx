@@ -2,7 +2,9 @@ import './Banner.css';
 import { useState, useEffect } from 'react';
 import { API_MOVIES_URL } from '../../utils/constant';
 import useFetch from '../../hooks/useFetch/useFetch';
-import { FontAwesomeIcon } from 'react-icons/fa';
+import { BsPlayFill } from 'react-icons/bs';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 const Banner = () => {
     const [movie, setMovie] = useState([]);
     const { data: topRatedMovies } = useFetch(API_MOVIES_URL.TOP_RATED);
@@ -35,13 +37,15 @@ const Banner = () => {
                 </h1>
                 <div className="banner__buttons">
                     <button className="banner__button">
-                        <FontAwesomeIcon icon="fa-sharp fa-solid fa-play" />
+                        <span className="icon"><BsPlayFill /></span>
                         <span>Play</span>
                     </button>
-                    <button className="banner__button">
-                        <FontAwesomeIcon icon="fa-thin fa-circle-info" />
-                        <span>Info</span>
-                    </button>
+                    <Link to={`/movies/${movie?.id}`}>
+                        <button className="banner__button">
+                            <span className="icon"><AiOutlineInfoCircle /></span>
+                            <span>Info</span>
+                        </button>
+                    </Link>
                 </div>
                 <h1 className="banner__description">
                     {truncate(movie?.overview, 150)}

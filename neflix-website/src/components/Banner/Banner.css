@@ -39,12 +39,23 @@
   padding-top: 0.5rem;
   background-color: rgba(51, 51, 51, 0.5);
   padding-bottom: 0.5rem;
+  position: relative;
 }
 
 .banner__button:hover {
   color: #000;
   background-color: #efefef;
   transition: all 0.2s;
+}
+
+.icon {
+  position: absolute;
+  top: 16%;
+  left: 10%;
+}
+
+.banner__button {
+  align-items: center;
 }
 
 .banner--fadeBottom {

@@ -72,7 +72,7 @@ const Home = () => {
             movieData={TV_LIST_TOP_RATED.results}
           />
           <MovieList
-            listTitle="Discover TV"
+            listTitle="Discover TV Series"
             movieData={DISCOVER_TV.results}
           />
 
