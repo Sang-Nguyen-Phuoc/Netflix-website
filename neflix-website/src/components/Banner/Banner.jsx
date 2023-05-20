@@ -2,7 +2,7 @@ import './Banner.css';
 import { useState, useEffect } from 'react';
 import { API_MOVIES_URL } from '../../utils/constant';
 import useFetch from '../../hooks/useFetch/useFetch';
-
+import { FontAwesomeIcon } from 'react-icons/fa';
 const Banner = () => {
     const [movie, setMovie] = useState([]);
     const { data: topRatedMovies } = useFetch(API_MOVIES_URL.TOP_RATED);
@@ -26,7 +26,7 @@ const Banner = () => {
             style={{
                 backgroundSize: "cover",
                 backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-                backgroundPosition: "center center",
+                backgroundPosition: "center ",
             }}
         >
             <section className="banner__contents">
@@ -34,8 +34,14 @@ const Banner = () => {
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
                 <div className="banner__buttons">
-                    <button className="banner__button">Play</button>
-                    <button className="banner__button">My List</button>
+                    <button className="banner__button">
+                        <FontAwesomeIcon icon="fa-sharp fa-solid fa-play" />
+                        <span>Play</span>
+                    </button>
+                    <button className="banner__button">
+                        <FontAwesomeIcon icon="fa-thin fa-circle-info" />
+                        <span>Info</span>
+                    </button>
                 </div>
                 <h1 className="banner__description">
                     {truncate(movie?.overview, 150)}

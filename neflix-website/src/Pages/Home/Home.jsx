@@ -4,6 +4,7 @@ import { API_MOVIES_URL } from "../../utils/constant";
 import useFetch from "../../hooks/useFetch/useFetch";
 import "./Home.css";
 import Banner from "../../components/Banner/Banner";
+import Header from "../../layouts/Header/Header";
 const Home = () => {
   const { data: popularMovies, isLoading: popularMovieLoading } = useFetch(
     API_MOVIES_URL.POPULAR
@@ -19,10 +20,12 @@ const Home = () => {
   );
   const { data: TV_LIST_POPULAR, isLoading: TVListLoading } = useFetch(API_MOVIES_URL.TV_LIST_POPULAR);
   const { data: TV_LIST_TOP_RATED, isLoading: TVListTopRatedLoading } = useFetch(API_MOVIES_URL.TV_LIST_TOP_RATED);
-  const { data: TV_LIST_ON_THE_AIR, isLoading: TVListOnTheAirLoading } = useFetch(API_MOVIES_URL.TV_LIST_ON_THE_AIR);
-
+  const { data: TV_LIST_TRENDING, isLoading: TVListTrendingLoading } = useFetch(API_MOVIES_URL.TV_LIST_TRENDING);
+  const { data: TRENDING_MOVIES, isLoading: trendingMovieLoading } = useFetch(API_MOVIES_URL.TRENDING_MOVIES);
+  const { data: DISCOVER_MOVIE, isLoading: discoerverMovieLoading } = useFetch(API_MOVIES_URL.DISCOVER_MOVIE);
+  const { data: DISCOVER_TV, isLoading: discoverTVLoading } = useFetch(API_MOVIES_URL.DISCOVER_TV);
   const isLoading =
-    popularMovieLoading || upcomingMovieLoading || topRatedMovieLoading || nowPlayingMovieLoading || TVListLoading || TVListTopRatedLoading || TVListOnTheAirLoading;
+    trendingMovieLoading || popularMovieLoading || upcomingMovieLoading || topRatedMovieLoading || nowPlayingMovieLoading || TVListLoading || TVListTopRatedLoading || TVListTrendingLoading || discoerverMovieLoading || discoverTVLoading;
 
   return (
     <div className="home">
@@ -30,10 +33,15 @@ const Home = () => {
         <div className="loading">Loading...</div>
       ) : (
         <main>
+          <Header />
           <Banner />
           <MovieList
             listTitle="Popular Movie"
             movieData={popularMovies.results}
+          />
+          <MovieList
+            listTitle="Trending Movie"
+            movieData={TRENDING_MOVIES.results}
           />
           <MovieList
             listTitle="Top Rated Movie"
@@ -48,6 +56,14 @@ const Home = () => {
             movieData={nowPlayingMovies.results}
           />
           <MovieList
+            listTitle="Discover Movie"
+            movieData={DISCOVER_MOVIE.results}
+          />
+          <MovieList
+            listTitle="Trending TV Series"
+            movieData={TV_LIST_TRENDING.results}
+          />
+          <MovieList
             listTitle="Popular TV Series "
             movieData={TV_LIST_POPULAR.results}
           />
@@ -56,9 +72,10 @@ const Home = () => {
             movieData={TV_LIST_TOP_RATED.results}
           />
           <MovieList
-            listTitle="On The Air TV Series"
-            movieData={TV_LIST_ON_THE_AIR.results}
+            listTitle="Discover TV"
+            movieData={DISCOVER_TV.results}
           />
+
 
         </main>
       )
