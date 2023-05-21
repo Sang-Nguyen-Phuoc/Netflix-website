@@ -5,6 +5,7 @@ import useFetch from "../../hooks/useFetch/useFetch";
 import "./Home.css";
 import Banner from "../../components/Banner/Banner";
 import Header from "../../layouts/Header/Header";
+import Footer from "../../layouts/Footer/Footer";
 const Home = () => {
   const { data: popularMovies, isLoading: popularMovieLoading } = useFetch(
     API_MOVIES_URL.POPULAR
@@ -75,8 +76,7 @@ const Home = () => {
             listTitle="Discover TV Series"
             movieData={DISCOVER_TV.results}
           />
-
-
+          <Footer />
         </main>
       )
       }

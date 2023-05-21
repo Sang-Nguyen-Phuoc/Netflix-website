@@ -5,17 +5,19 @@ import Signup from './Pages/Signup/Signup';
 import NotFound from './Pages/NotFound/NotFound';
 import { Routes, Route } from 'react-router-dom';
 import Profile from './Pages/Profile/Profile';
+import MovieDetail from './Pages/MovieDetail/MovieDetail'
 
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/movies/:movieId" element={<MovieDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

@@ -1,1 +1,28 @@
 - Có thể xem xét dùng code mẫu header và carousel của Responsive React Movies App With API | ReactJS Movies | ReactJS Tutorial
+
+Route: bọc <BrowserRouter> 
+vào <App /> ở trang index.jx
+ 
+Trong App.js: 
+Routes> Route> path: "/abc" và element = "truyền component".>
+
+Thẻ <link: to"/abc"(liên kết tới trang có cùng path)
+
+path="*": các địa chỉ còn lại. 
+
+
+Lưu ý: chỉ có <Link/> mới có thuộc tính to:'/'
+nếu muốn dùng các tag khác với to: sử dụng navigate = useNavigate(); build hàm onNavigateToPageX và bắt sự kiện onclick của 1 button chẳng hạn.
+
+
+https://react-slick.neostack.com/
+
+https://www.themoviedb.org/signup
+
+Link Demo: https://mindx-movieapp.netlify.app/
+
+API docs: https://developer.themoviedb.org/reference/movie-details
+
+https://github.com/Th3Wall/Fakeflix
+
+Tao 1 div chua thong 

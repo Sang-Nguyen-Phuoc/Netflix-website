@@ -26,6 +26,7 @@
   width: 80px;
   object-fit: contain;
   cursor: pointer;
+  top: 40px;
 }
 .nav_options {
   display: flex;
@@ -43,7 +44,7 @@
 .left {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 60px;
 }
 .nav_option {
   color: white;
