@@ -3,7 +3,10 @@
   margin: 0 auto;
   --bs-gutter-x: 0rem;
 }
-
+body {
+  background-color: #111;
+  overflow-x: hidden;
+}
 h2 {
   color: #fff;
 }

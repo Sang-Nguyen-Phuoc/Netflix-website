@@ -39,7 +39,7 @@
 }
 
 .error .container-error-404 {
-  margin-top: 10%;
+  margin-top: 5%;
   position: relative;
   height: 250px;
   padding-top: 40px;
@@ -81,8 +81,8 @@
 .error .digit {
   position: relative;
   top: 8%;
-  color: white;
-  background: #07b3f9;
+  color: #fff;
+  background: #f93007;
   border-radius: 50%;
   display: inline-block;
   transform: skew(45deg);
@@ -106,7 +106,7 @@
   z-index: 9999;
   display: block;
   background: #535353;
-  color: #a2a2a2;
+  color: #fff;
   border-radius: 50%;
   font-style: italic;
 }
@@ -162,6 +162,13 @@
   /* Error Page */
 }
 
+.text p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 300;
+}
+
 /*--------------------------------------------Framework --------------------------------*/
 
 .overlay {
@@ -169,10 +176,10 @@
   z-index: 20;
 } /*done*/
 .ground-color {
-  background: white;
+  background: #111;
 } /*done*/
 .item-bg-color {
-  background: #eaeaea;
+  background: #111;
 } /*done*/
 
 /* Padding Section*/

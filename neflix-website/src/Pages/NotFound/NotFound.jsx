@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './NotFound.css';
 import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
 
 const NotFound = () => {
   const [digit1, setDigit1] = useState('');

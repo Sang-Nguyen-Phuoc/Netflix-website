@@ -6,6 +6,8 @@ import "./Home.css";
 import Banner from "../../components/Banner/Banner";
 import Header from "../../layouts/Header/Header";
 import Footer from "../../layouts/Footer/Footer";
+import Loading from "../../components/Loading/Loading";
+import NetflixLoad from "../../components/NettlixLoad/NetflixLoad";
 const Home = () => {
   const { data: popularMovies, isLoading: popularMovieLoading } = useFetch(
     API_MOVIES_URL.POPULAR
@@ -31,7 +33,9 @@ const Home = () => {
   return (
     <div className="home">
       {isLoading ? (
-        <div className="loading">Loading...</div>
+        <>
+          <div className="NetflixIntro"><NetflixLoad /></div>
+        </>
       ) : (
         <main>
           <Header />
