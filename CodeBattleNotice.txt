@@ -26,3 +26,9 @@ API docs: https://developer.themoviedb.org/reference/movie-details
 https://github.com/Th3Wall/Fakeflix
 
 Tao 1 div chua thong 
+
+luu id cua bo phim vao state va qua trang my list thi goi no 
+
+
+localstorage.setItem('key', JSON.stringify(value))
+JSON.parse(localstorage.getItem('key'))
