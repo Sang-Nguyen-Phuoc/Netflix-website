@@ -99,6 +99,7 @@
   font-size: 22px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
+  text-align: center;
 }
 
 .sign-up-container .registerButton:hover {

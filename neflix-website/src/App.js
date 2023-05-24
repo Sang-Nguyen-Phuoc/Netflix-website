@@ -9,6 +9,7 @@ import Movies from './Pages/Movies/Movies';
 import TVSeries from './Pages/TVSeries/TVSeries';
 import { useState } from 'react';
 import AppContext from '../src/contexts/AppContext';
+import MyList from './Pages/MyList/MyList';
 
 
 
@@ -42,6 +43,7 @@ function App() {
       < div className="App container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Mylist" element={<MyList />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/movies" element={<Movies />} />

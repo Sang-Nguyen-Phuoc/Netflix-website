@@ -38,7 +38,11 @@ const MovieItem = (props) => {
             </Link>
           </span>
           <p className="movie-item-overview">{truncate(movie?.overview, listTitle === "Popular Movie" ? 100 : 275)}</p>
-          <button className={added ? "addToList" : "notAddToList"} onClick={() => { onAddToList(id, movie) }}>
+          <button
+            className={added ? "addToList disabled" : "notAddToList"}
+            disabled={added}
+            onClick={() => onAddToList(id, movie)}
+          >
             {added ? "Added" : "Add to List"}
           </button>
         </div>

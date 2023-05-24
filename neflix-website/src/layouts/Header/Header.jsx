@@ -32,7 +32,7 @@ const Header = () => {
         <div className={`nav_options ${show && "nav_options_black"}`}>
           <Link to='/TVSeries' className="nav_option" > <span className="nav_option">TV series</span> </Link>
           <Link to='/Movies' className="nav_option"> <span className="nav_option">Movies</span> </Link>
-          <span className="nav_option">My list</span>
+          <Link to='/Mylist' className="nav_option" ><span className="nav_option">My list</span> </Link>
         </div>
       </div>
       <div className="right">
@@ -48,7 +48,7 @@ const Header = () => {
               alt="Avatar" />
           </button>
           <div class="dropdown-content">
-            <div className="dropdown-content-item">Log out</div>
+            <Link to='/signup' className="dropdown-content-item"><div className="dropdown-content-item">Log out</div></Link>
           </div>
         </div>
 
