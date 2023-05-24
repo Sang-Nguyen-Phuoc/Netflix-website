@@ -30,12 +30,16 @@ const Header = () => {
         </Link>
         <div className="nav_img"></div>
         <div className={`nav_options ${show && "nav_options_black"}`}>
-          <span className="nav_option">TV series</span>
-          <span className="nav_option">Movies</span>
+          <Link to='/TVSeries' className="nav_option" > <span className="nav_option">TV series</span> </Link>
+          <Link to='/Movies' className="nav_option"> <span className="nav_option">Movies</span> </Link>
           <span className="nav_option">My list</span>
         </div>
       </div>
       <div className="right">
+        <form className="d-flex" role="search">
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button className="btn btn-outline-success" type="submit">Search</button>
+        </form>
         <div class="dropdown">
           <button class="dropbtn">
             <img
@@ -44,7 +48,6 @@ const Header = () => {
               alt="Avatar" />
           </button>
           <div class="dropdown-content">
-            <Link to="/profile" style={{ textDecoration: 'none' }}> <div className="dropdown-content-item">Profile</div> </Link>
             <div className="dropdown-content-item">Log out</div>
           </div>
         </div>

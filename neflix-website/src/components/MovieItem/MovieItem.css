@@ -67,10 +67,22 @@
   margin-top: -4px;
 }
 
-.icon-play,
+.icon-play {
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.icon-play-active {
+  cursor: pointer;
+  color: grey;
+  margin-bottom: 4px;
+}
+
 .icon-info {
   cursor: pointer;
   color: #fff;
+  margin-bottom: 4px;
 }
 
 .addtolist {

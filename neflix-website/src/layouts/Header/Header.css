@@ -1,7 +1,7 @@
 .nav {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 1440px;
   padding: 20px;
   height: 100px;
   z-index: 100;
@@ -10,41 +10,35 @@
   justify-content: space-between;
 }
 
+.left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 .right {
-  padding: 12px;
-  margin-right: 64px;
-  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 .nav__black {
   background-color: #111;
 }
 
 .nav__logo {
-  position: fixed;
-  left: 20px;
   width: 80px;
   object-fit: contain;
   cursor: pointer;
-  top: 40px;
 }
 .nav_options {
   display: flex;
   gap: 10px;
 }
 .nav__avatar {
-  position: fixed;
-  right: 50px;
   width: 36px;
   object-fit: contain;
-  margin-right: 64px;
-  z-index: 100;
-  top: 32px;
+  height: auto;
 }
-.left {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
+
 .nav_option {
   color: white;
   text-decoration: none;
@@ -80,8 +74,10 @@
   background-color: #04aa6d;
   color: white;
   padding: 0px;
-  margin-right: 54px;
   border: none;
+  width: 36px;
+  height: auto;
+  margin-right: 150px;
 }
 
 /* The container <div> - needed to position the dropdown content */

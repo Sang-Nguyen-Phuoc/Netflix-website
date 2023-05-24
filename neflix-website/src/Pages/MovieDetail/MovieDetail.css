@@ -1,6 +1,6 @@
 .movie-detail-container {
   background-color: #fff;
-  height: 100px;
+  height: 90px;
 }
 .singleHeading {
   margin-top: 100px;
@@ -121,7 +121,7 @@
 }
 .movie-detail img {
   width: auto;
-  height: 75%;
+  height: 60%;
   object-fit: contain;
 }
 .movie-info {
